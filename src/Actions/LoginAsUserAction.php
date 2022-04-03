@@ -25,8 +25,8 @@ class LoginAsUserAction extends AbstractAction
     public function getAttributes()
     {
         return [
-            'id'     => 'login_as_user_btn',
-            'class'  => 'btn btn-sm btn-primary pull-right',
+            'id'    => 'login_as_user_btn',
+            'class' => 'btn btn-sm btn-primary pull-right',
         ];
     }
 
