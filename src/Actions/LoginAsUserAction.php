@@ -26,8 +26,7 @@ class LoginAsUserAction extends AbstractAction
     {
         return [
             'id'     => 'login_as_user_btn',
-            'class'  => 'btn btn-primary',
-            'target' => '_blank',
+            'class'  => 'btn btn-sm btn-primary pull-right',
         ];
     }
 
