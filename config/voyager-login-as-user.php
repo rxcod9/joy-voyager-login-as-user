@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'allowed_slugs' => array_filter(explode(',', env('VOYAGER_LOGIN_AS_USER_ALLOWED_SLUGS', '*'))),
+    'allowed_slugs' => array_filter(explode(',', env('VOYAGER_LOGIN_AS_USER_ALLOWED_SLUGS', 'users'))),
 
     /*
     | Here you can specify for which data type slugs login-as-user is not allowed
