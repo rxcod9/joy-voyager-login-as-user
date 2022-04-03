@@ -16,7 +16,7 @@ class LoginAsUserAction extends AbstractAction
 
     public function getIcon()
     {
-        return 'voyager-login-as-user fa-solid fa-user-secret';
+        return 'fa-solid fa-user-secret';
     }
 
     public function getPolicy()
