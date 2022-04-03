@@ -1,22 +1,22 @@
 <?php
 
-namespace Joy\VoyagerReplaceKeyword\Actions;
+namespace Joy\VoyagerLoginAsUser\Actions;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use TCG\Voyager\Actions\AbstractAction;
 use TCG\Voyager\Facades\Voyager;
 
-class ReplaceKeywordAction extends AbstractAction
+class LoginAsUserAction extends AbstractAction
 {
     public function getTitle()
     {
-        return __('joy-voyager-replace-keyword::generic.replace_keyword');
+        return __('joy-voyager-login-as-user::generic.login_as_user');
     }
 
     public function getIcon()
     {
-        return 'voyager-replace-keyword';
+        return 'voyager-login-as-user';
     }
 
     public function getPolicy()
@@ -27,7 +27,7 @@ class ReplaceKeywordAction extends AbstractAction
     public function getAttributes()
     {
         return [
-            'id'     => 'replace_keyword_btn',
+            'id'     => 'login_as_user_btn',
             'class'  => 'btn btn-primary',
             'target' => '_blank',
         ];
@@ -40,14 +40,14 @@ class ReplaceKeywordAction extends AbstractAction
 
     public function shouldActionDisplayOnDataType()
     {
-        return config('joy-voyager-replace-keyword.enabled', true) !== false
+        return config('joy-voyager-login-as-user.enabled', true) !== false
             && isInPatterns(
                 $this->dataType->slug,
-                config('joy-voyager-replace-keyword.allowed_slugs', ['*'])
+                config('joy-voyager-login-as-user.allowed_slugs', ['*'])
             )
             && !isInPatterns(
                 $this->dataType->slug,
-                config('joy-voyager-replace-keyword.not_allowed_slugs', [])
+                config('joy-voyager-login-as-user.not_allowed_slugs', [])
             );
     }
 
@@ -65,7 +65,7 @@ class ReplaceKeywordAction extends AbstractAction
         // Your macgic here
 
         return redirect()->back()->with([
-            'message'    => __('joy-voyager-replace-keyword::generic.successfully_replace_keyworded') . " {$dataType->getTranslatedAttribute('display_name_singular')}",
+            'message'    => __('joy-voyager-login-as-user::generic.successfully_login_as_usered') . " {$dataType->getTranslatedAttribute('display_name_singular')}",
             'alert-type' => 'success',
         ]);
     }

@@ -1,24 +1,24 @@
 <?php
 
-namespace Joy\VoyagerReplaceKeyword\Console\Commands;
+namespace Joy\VoyagerLoginAsUser\Console\Commands;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
-class ReplaceKeyword extends Command
+class LoginAsUser extends Command
 {
-    protected $name = 'joy-replace-keyword';
+    protected $name = 'joy-login-as-user';
 
-    protected $description = 'Joy Voyager ReplaceKeyworder';
+    protected $description = 'Joy Voyager LoginAsUserer';
 
     public function handle()
     {
-        $this->output->title('Starting replace-keyword');
+        $this->output->title('Starting login-as-user');
 
         // Your magic here
 
-        $this->output->success('ReplaceKeyword successful');
+        $this->output->success('LoginAsUser successful');
     }
 
     /**
@@ -46,7 +46,7 @@ class ReplaceKeyword extends Command
                 'o',
                 InputOption::VALUE_OPTIONAL,
                 'The option1 description',
-                config('joy-voyager-replace-keyword.option1')
+                config('joy-voyager-login-as-user.option1')
             ],
         ];
     }

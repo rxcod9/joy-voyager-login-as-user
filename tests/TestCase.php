@@ -1,9 +1,9 @@
 <?php
 
-namespace Joy\VoyagerReplaceKeyword\Tests;
+namespace Joy\VoyagerLoginAsUser\Tests;
 
 use Dotenv\Dotenv;
-use Joy\VoyagerReplaceKeyword\VoyagerReplaceKeywordServiceProvider;
+use Joy\VoyagerLoginAsUser\VoyagerLoginAsUserServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra
@@ -36,7 +36,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         $serviceProviders = [
-            VoyagerReplaceKeywordServiceProvider::class,
+            VoyagerLoginAsUserServiceProvider::class,
         ];
 
         return $serviceProviders;

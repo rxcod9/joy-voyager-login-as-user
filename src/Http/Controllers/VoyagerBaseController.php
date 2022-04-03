@@ -1,11 +1,11 @@
 <?php
 
-namespace Joy\VoyagerReplaceKeyword\Http\Controllers;
+namespace Joy\VoyagerLoginAsUser\Http\Controllers;
 
-use Joy\VoyagerReplaceKeyword\Http\Traits\ReplaceKeywordAction;
+use Joy\VoyagerLoginAsUser\Http\Traits\LoginAsUserAction;
 use TCG\Voyager\Http\Controllers\VoyagerBaseController as TCGVoyagerBaseController;
 
 class VoyagerBaseController extends TCGVoyagerBaseController
 {
-    use ReplaceKeywordAction;
+    use LoginAsUserAction;
 }

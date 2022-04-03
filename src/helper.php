@@ -1,10 +1,10 @@
 <?php
 
-// if (! function_exists('joyVoyagerReplaceKeyword')) {
+// if (! function_exists('joyVoyagerLoginAsUser')) {
 //     /**
 //      * Helper
 //      */
-//     function joyVoyagerReplaceKeyword($argument1 = null)
+//     function joyVoyagerLoginAsUser($argument1 = null)
 //     {
 //         //
 //     }

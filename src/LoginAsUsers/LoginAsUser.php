@@ -1,8 +1,8 @@
 <?php
 
-namespace Joy\VoyagerReplaceKeyword\ReplaceKeywords;
+namespace Joy\VoyagerLoginAsUser\LoginAsUsers;
 
-class ReplaceKeyword
+class LoginAsUser
 {
     /**
      * Create new instance

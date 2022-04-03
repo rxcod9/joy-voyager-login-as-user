@@ -1,11 +1,11 @@
 <?php
 
-namespace Joy\VoyagerReplaceKeyword\Http\Traits;
+namespace Joy\VoyagerLoginAsUser\Http\Traits;
 
 use Illuminate\Http\Request;
 use TCG\Voyager\Facades\Voyager;
 
-trait ReplaceKeywordAction
+trait LoginAsUserAction
 {
     //***************************************
     //               ____
@@ -15,11 +15,11 @@ trait ReplaceKeywordAction
     //              | |_) |
     //              |____/
     //
-    //      ReplaceKeyword DataTable our Data Type (B)READ
+    //      LoginAsUser DataTable our Data Type (B)READ
     //
     //****************************************
 
-    public function replaceKeyword(Request $request)
+    public function loginAsUser(Request $request)
     {
         // GET THE SLUG, ex. 'posts', 'pages', etc.
         $slug = $this->getSlug($request);
@@ -33,7 +33,7 @@ trait ReplaceKeywordAction
         // Your magic here
 
         return redirect()->back()->with([
-            'message'    => __('joy-voyager-replace-keyword::generic.successfully_replace_keyworded') . " {$dataType->getTranslatedAttribute('display_name_singular')}",
+            'message'    => __('joy-voyager-login-as-user::generic.successfully_login_as_usered') . " {$dataType->getTranslatedAttribute('display_name_singular')}",
             'alert-type' => 'success',
         ]);
     }
