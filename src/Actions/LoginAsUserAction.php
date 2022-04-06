@@ -3,6 +3,7 @@
 namespace Joy\VoyagerLoginAsUser\Actions;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use TCG\Voyager\Actions\AbstractAction;
 
 class LoginAsUserAction extends AbstractAction
@@ -31,12 +32,12 @@ class LoginAsUserAction extends AbstractAction
 
     public function getDefaultRoute()
     {
-        // return route('my.route');
+        return route('impersonate', $this->data->{$this->data->getKeyName()});
     }
 
     public function shouldActionDisplayOnDataType()
     {
-        return config('joy-voyager-login-as-user.enabled', true) !== false
+        $isEnabled = config('joy-voyager-login-as-user.enabled', true) !== false
             && isInPatterns(
                 $this->dataType->slug,
                 config('joy-voyager-login-as-user.allowed_slugs', ['*'])
@@ -45,6 +46,19 @@ class LoginAsUserAction extends AbstractAction
                 $this->dataType->slug,
                 config('joy-voyager-login-as-user.not_allowed_slugs', [])
             );
+
+        if (!$isEnabled) {
+            return false;
+        }
+        
+        $user = Auth::user();
+
+        return method_exists($user, 'canImpersonate') && $user->canImpersonate();
+    }
+
+    public function shouldActionDisplayOnRow($row)
+    {
+        return method_exists($row, 'canBeImpersonated') && $row->canBeImpersonated();
     }
 
     protected function getSlug(Request $request)

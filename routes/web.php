@@ -18,6 +18,8 @@ use TCG\Voyager\Facades\Voyager;
 |
 */
 
+Route::impersonate();
+
 Route::group(['prefix' => config('joy-voyager-login-as-user.admin_prefix', 'admin')], function () {
     Route::group(['as' => 'voyager.'], function () {
         // event(new Routing()); @deprecated

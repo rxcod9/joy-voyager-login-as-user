@@ -28,6 +28,8 @@ composer require joy/voyager-login-as-user
 
 # 2. Publish
 php artisan vendor:publish --provider="Joy\VoyagerLoginAsUser\VoyagerLoginAsUserServiceProvider" --force
+
+# 3. Add the trait Lab404\Impersonate\Models\Impersonate to your User model.
 ```
 
 ---
@@ -42,6 +44,8 @@ You can try laravel demo here [https://joy-voyager.herokuapp.com/admin/users](ht
 Find yourself stuck using the package? Found a bug? Do you have general questions or suggestions for improving the joy voyager-login-as-user? Feel free to [create an issue on GitHub](https://github.com/rxcod9/joy-voyager-login-as-user/issues), we'll try to address it as soon as possible.
 
 If you've found a bug regarding security please mail [gangwar.ramakant@gmail.com](mailto:gangwar.ramakant@gmail.com) instead of using the issue tracker.
+
+Also for laravel package `404labfr/laravel-impersonate` read following documentation https://github.com/404labfr/laravel-impersonate#simple-usage
 
 ## Testing
 
