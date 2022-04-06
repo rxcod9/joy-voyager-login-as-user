@@ -5,7 +5,7 @@ namespace Joy\VoyagerLoginAsUser\Events;
 use Illuminate\Queue\SerializesModels;
 use TCG\Voyager\Models\DataType;
 
-class BreadDataLoginAsUsered
+class BreadDataLoggedinAsUser
 {
     use SerializesModels;
 
