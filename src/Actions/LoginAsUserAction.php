@@ -50,7 +50,7 @@ class LoginAsUserAction extends AbstractAction
         if (!$isEnabled) {
             return false;
         }
-        
+
         $user = Auth::user();
 
         return method_exists($user, 'canImpersonate') && $user->canImpersonate();
