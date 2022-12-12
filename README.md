@@ -4,7 +4,7 @@ This [Laravel](https://laravel.com/)/[Voyager](https://voyager.devdojo.com/) mod
 
 By 🐼 [Ramakant Gangwar](https://github.com/rxcod9).
 
-[![Screenshot](https://raw.githubusercontent.com/rxcod9/joy-voyager-login-as-user/main/cover.jpg)](https://joy-voyager.herokuapp.com/)
+[![Screenshot](https://raw.githubusercontent.com/rxcod9/joy-voyager-login-as-user/main/cover.jpg)](https://joy-voyager.kodmonk.com/)
 
 [![Latest Version](https://img.shields.io/github/v/release/rxcod9/joy-voyager-login-as-user?style=flat-square)](https://github.com/rxcod9/joy-voyager-login-as-user/releases)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rxcod9/joy-voyager-login-as-user/run-tests?label=tests)
@@ -37,7 +37,7 @@ php artisan vendor:publish --provider="Joy\VoyagerLoginAsUser\VoyagerLoginAsUser
 
 ## Working Example
 
-You can try laravel demo here [https://joy-voyager.herokuapp.com/admin/users](https://joy-voyager.herokuapp.com/admin/users).
+You can try laravel demo here [https://joy-voyager.kodmonk.com/admin/users](https://joy-voyager.kodmonk.com/admin/users).
 
 ## Documentation
 
