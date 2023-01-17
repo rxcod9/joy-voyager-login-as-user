@@ -3,9 +3,9 @@
 namespace Joy\VoyagerLoginAsUser\Http\Controllers;
 
 use Joy\VoyagerLoginAsUser\Http\Traits\LoginAsUserAction;
-use TCG\Voyager\Http\Controllers\VoyagerBaseController as TCGVoyagerBaseController;
+use Joy\VoyagerCore\Http\Controllers\VoyagerBaseController as BaseVoyagerBaseController;
 
-class VoyagerBaseController extends TCGVoyagerBaseController
+class VoyagerBaseController extends BaseVoyagerBaseController
 {
     use LoginAsUserAction;
 }
